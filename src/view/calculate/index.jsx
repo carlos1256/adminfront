@@ -5,6 +5,7 @@ function Calculate(){
     const [cost, setCost] = useState(1);
     const [type, setType] = useState(1);
     const [qty, setQty] = useState(1);
+    const [forceRender, setForceRender] = useState(false);      
     return(
         <div className="flex w-screen bg-red-800">
             <div className='w-1/2 p-8 bg-slate-200'>
@@ -20,7 +21,8 @@ function Calculate(){
                             <input
                             type="number"
                             value={qty}
-                            onChange={(e) => setQty(parseInt(e.target.value))}
+                            onChange={(e) => {setQty(parseInt(e.target.value));  
+                                setForceRender(!forceRender)}}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                             />
                         </div>
@@ -29,7 +31,7 @@ function Calculate(){
                             <input
                             type="number"
                             value={type}
-                            onChange={(e) => setType(e.target.value)}
+                            onChange={(e) => {setType(e.target.value);setForceRender(!forceRender)}}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                             />        
                         </div>
@@ -39,7 +41,7 @@ function Calculate(){
                             type="number"
                             value={cost}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                            onChange={(e) => setCost(parseFloat(e.target.value))}
+                            onChange={(e) => {setCost(parseFloat(e.target.value));setForceRender(!forceRender)}}
                             />
                         </div>
                     </div>
