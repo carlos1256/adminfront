@@ -20,7 +20,7 @@ function Calculate(){
                             <input
                             type="number"
                             value={qty}
-                            onChange={(e) => setQty(parseInt(e.target.value))}
+                            onBlur={(e) => setQty(parseInt(e.target.value))}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                             />
                         </div>
@@ -29,7 +29,7 @@ function Calculate(){
                             <input
                             type="number"
                             value={type}
-                            onChange={(e) => setType(e.target.value)}
+                            onBlur={(e) => setType(e.target.value)}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                             />        
                         </div>
@@ -39,7 +39,7 @@ function Calculate(){
                             type="number"
                             value={cost}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                            onChange={(e) => setCost(parseFloat(e.target.value))}
+                             onBlur={(e) => setCost(parseFloat(e.target.value))}
                             />
                         </div>
                     </div>
