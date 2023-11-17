@@ -7,7 +7,7 @@ function Calculate(){
     const [qty, setQty] = useState(1);
     const [forceRender, setForceRender] = useState(false);      
     return(
-        <div className="flex w-screen sm:flex-col bg-red-800">
+        <div className="flex w-screen sm:flex-col lg:flex-row bg-red-800">
             <div className='w-1/2 p-8 bg-slate-200'>
                 <div className="">
                     <div className="">
